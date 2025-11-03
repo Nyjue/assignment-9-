@@ -1,35 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Assignment #9: Giphy API</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-    <link href = "./css/style.css" rel="stylesheet" />
-  </head>
-  <body>
-    <div class="container my-5">
-      <h1 class="mb-4 text-center">Fetch a Gif</h1>
-      <!-- Stretch: Add search functionality by commenting out the <div> element below -->
-
-      <div class="row justify-content-center mb-3">
-        <div class="col-md-6">
-          <input type="text" id="search-input" class="form-control" placeholder="Search for a GIF">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giphy API Demo</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="display-4">Giphy API Demo</h1>
+            <p class="lead">Click the button below to fetch trending GIFs from Giphy</p>
+            <button id="fetch-btn" class="btn btn-primary btn-lg">Fetch GIFs</button>
         </div>
-      </div>
-      
-
-      <!-- <div class="d-flex justify-content-center mb-4">
-        <button id="fetch-gif-btn" class="btn btn-primary">
-          Fetch a GIF
-        </button>
-      </div> -->
-
-      <div id="gif-container" class="row">
-        <!-- Output your gifs here -->
-      </div>
+        
+        <div id="gif-container" class="row">
+            <!-- GIFs will be displayed here -->
+            <div class="col-12 text-center text-muted">
+                <p>No GIFs yet. Click the button above to fetch some!</p>
+            </div>
+        </div>
     </div>
 
-    <script src="./js/script.js"></script>
-  </body>
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="js/script.js"></script>
+</body>
 </html>

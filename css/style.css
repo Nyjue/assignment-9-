@@ -1,1 +1,115 @@
-/* Add any custom CSS stylings you want here */
+body {
+    background-color: #f8f9fa;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.header h1 {
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.header .lead {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.btn-primary {
+    background-color: #00cc99;
+    border-color: #00cc99;
+    padding: 12px 30px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 204, 153, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: #00b386;
+    border-color: #00b386;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 204, 153, 0.4);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+#gif-container {
+    min-height: 300px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.gif-image {
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+.gif-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.loading {
+    text-align: center;
+    padding: 40px;
+}
+
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+    color: #00cc99;
+}
+
+.alert {
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.alert-danger {
+    background-color: #ffe6e6;
+    color: #d63031;
+    border-left: 4px solid #d63031;
+}
+
+.text-muted {
+    color: #6c757d !important;
+    font-style: italic;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .header {
+        padding: 20px;
+    }
+    
+    .header h1 {
+        font-size: 2rem;
+    }
+    
+    .btn-primary {
+        padding: 10px 25px;
+        font-size: 1rem;
+    }
+}
