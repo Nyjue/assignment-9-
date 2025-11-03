@@ -1,18 +1,13 @@
-// API Configuration
-// IMPORTANT: In a real application, this would be stored in environment variables
-// For this educational exercise, we're including it directly
-const API_KEY = "YOUR_API_KEY_HERE"; // Replace with your actual Giphy API key
+const API_KEY = "sc4kkMZTIE6Ubu4zHKMH70XPhNMLw4Yt"; 
 const BASE_URL = "https://api.giphy.com/v1/gifs";
 
-// DOM Elements
 const fetchBtn = document.getElementById('fetch-btn');
 const gifContainer = document.getElementById('gif-container');
 
-// Event Listeners
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Giphy API Demo loaded successfully!');
     
-    // Attach event listener to the fetch button
+    
     fetchBtn.addEventListener('click', handleFetchGifs);
 });
 
@@ -34,10 +29,10 @@ async function handleFetchGifs() {
     }
 }
 
-// Function to fetch GIFs using async/await
+
 async function fetchGifs() {
-    // Using the search endpoint with a hardcoded query as specified in the assignment
-    const query = 'cats'; // Hardcoded query as mentioned in Step 5
+   
+    const query = 'cats';
     const endpoint = `${BASE_URL}/search?api_key=${API_KEY}&q=${query}&limit=12&rating=g`;
     
     console.log('Fetching from endpoint:', endpoint);
@@ -58,9 +53,9 @@ async function fetchGifs() {
     return images;
 }
 
-// Function to display GIFs in the container
+
 function displayGifs(images) {
-    // Clear previous content
+   
     gifContainer.innerHTML = '';
     
     if (!images || images.length === 0) {
@@ -68,19 +63,19 @@ function displayGifs(images) {
         return;
     }
     
-    // Iterate through the images array and create image elements
+ 
     images.forEach(imageUrl => {
-        // Create the HTML string for each image
+       
         const imageHTML = `<img src="${imageUrl}" class="col-3 mb-3 gif-image" alt="GIF">`;
         
-        // Add the image to the container using innerHTML and += operator
+       
         gifContainer.innerHTML += imageHTML;
     });
     
     console.log(`Displayed ${images.length} GIFs`);
 }
 
-// Helper function to show loading state
+
 function showLoading() {
     gifContainer.innerHTML = `
         <div class="loading col-12">
@@ -92,7 +87,7 @@ function showLoading() {
     `;
 }
 
-// Helper function to show error message
+
 function showError(message) {
     gifContainer.innerHTML = `
         <div class="alert alert-danger col-12" role="alert">
@@ -101,7 +96,7 @@ function showError(message) {
     `;
 }
 
-// Helper function to show informational message
+
 function showMessage(message) {
     gifContainer.innerHTML = `
         <div class="col-12 text-center text-muted">
