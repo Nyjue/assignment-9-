@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', function() {
     fetchBtn.addEventListener('click', handleFetchGifs);
 });
 
-// Main function to handle GIF fetching
 async function handleFetchGifs() {
     try {
         // Show loading state
